@@ -98,6 +98,10 @@ h1 {
   }
 }
 
+h1 {
+  display: none;
+}
+
 .join {
   grid-area: join;
   background-color: #FFFFFF;
