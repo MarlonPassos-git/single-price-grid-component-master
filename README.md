@@ -9,7 +9,7 @@
 ## Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://meet-landing-page-bice.vercel.app/](https://meet-landing-page-bice.vercel.app/)
+- Live Site URL: [https://single-price-grid-component-master-inky-nine.vercel.app/](https://single-price-grid-component-master-inky-nine.vercel.app/)
 
 
 ## Built with
