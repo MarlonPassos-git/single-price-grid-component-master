@@ -1,0 +1,170 @@
+.container {
+
+
+    margin: 98px 0 36px 0;
+    display: grid;
+    grid-template-areas:
+
+        "join"
+        "plan"
+        "why"
+    ;
+
+
+
+    width: 82.93333333333334vw;
+    max-width: rem(635);
+    overflow: hidden;
+
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 15px 30px 0 rgba(0, 81, 171, 0.15);
+
+    @media (min-width: 700px) {
+        grid-template:
+
+        "join join"
+        "plan why"
+        / 1fr 1fr
+    ;
+    }
+}
+
+
+.join {
+    grid-area: join;
+
+    background-color: $c__white;
+    padding: $s__padding-card-mobile;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+    @media (min-width: 700px) {
+        height: 216px;
+        
+    }
+
+    &__title {
+        color: $c__eastern-blue;
+        font-size: flex(20, 24);
+        letter-spacing: -0.25px;
+        margin-top: -6px;
+    }
+
+    &__subtitle {
+        color: $c__pear;
+        line-height: 1.33;
+        letter-spacing: -0.19px;
+        margin: 24px 0 16px;
+        font-weight: 700;
+        font-size: flex(15, 18);
+
+        @media (min-width: 700px) {
+            height: 216px;
+            margin: 20px 0 9px;
+        }
+    }
+
+    &__paragraph {
+        line-height: 26px;
+        letter-spacing: -0.18px;
+        color: $c__cadet-blue;
+        font-size: flex(14, 16);
+        font-weight: 400;
+        margin-bottom: 8px
+    }
+
+
+}
+
+.title {
+    font-weight: 700;
+
+}
+
+
+.plan {
+    grid-area: plan;
+    background-color: $c__eastern-blue;
+    padding: $s__padding-card-mobile;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        letter-spacing: -0.23px;
+        color: $c__white;
+        font-size: rem(18);
+        margin:-7px 0 18px;
+
+    }
+
+    &__cost {
+        line-height: 1.63;
+        letter-spacing: -0.2px;
+        color: #ffffff50;
+        font-weight: 400;
+        font-size: rem(16);
+        display: flex;
+        align-items: center;
+
+        &--value {
+            letter-spacing: -0.4px;
+            line-height: normal;
+            font-size: rem(32);
+            margin: 0 11px 0 0;
+            opacity: 1;
+            display: inline-flex;
+            color: $c__white;
+            font-weight: bold;
+        }
+
+
+    }
+
+
+    &__paragraph {
+        line-height: 1.63;
+        letter-spacing: -0.2px;
+        font-size: rem(16);
+        color: $c__white;
+        margin: 4px 0 26px;
+    }
+
+    &__button {
+
+        height: rem(48);
+        width: 100%;
+        background-color: $c__pear;
+        display: grid;
+        place-items: center;
+        color: $c__white;
+        letter-spacing: -0.2px;
+        font-size: rem(16);
+        border-radius: 5px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+
+    }
+}
+
+.why {
+    grid-area: why;
+    background-color: #4BBFBC;
+    padding: $s__padding-card-mobile;
+    color: $c__white;
+
+
+    &__title {
+        letter-spacing: -0.23px;
+        font-size: rem(18);
+        margin: -7px 0 18px;
+    }
+
+    &__element {
+        line-height: 1.43;
+        letter-spacing: -0.18px;
+        opacity: 0.75;
+        font-size: rem(14);
+        font-weight: 400;
+    }
+}

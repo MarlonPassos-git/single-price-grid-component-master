@@ -1,0 +1,242 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list], ul, ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+h1 {
+  font-size: max(24px, min(40px, calc(40px + -16 * ((1440px - 100vw) / 1065))));
+}
+
+.container {
+  margin: 98px 0 36px 0;
+  display: grid;
+  grid-template-areas: "join" "plan" "why";
+  width: 82.9333333333vw;
+  max-width: 39.6875rem;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 15px 30px 0 rgba(0, 81, 171, 0.15);
+}
+@media (min-width: 700px) {
+  .container {
+    grid-template: "join join" "plan why"/1fr 1fr;
+  }
+}
+
+.join {
+  grid-area: join;
+  background-color: #FFFFFF;
+  padding: max(24px, min(40px, calc(40px + -16 * ((1440px - 100vw) / 1065))));
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+@media (min-width: 700px) {
+  .join {
+    height: 216px;
+  }
+}
+.join__title {
+  color: #2AB3B1;
+  font-size: max(20px, min(24px, calc(24px + -4 * ((1440px - 100vw) / 1065))));
+  letter-spacing: -0.25px;
+  margin-top: -6px;
+}
+.join__subtitle {
+  color: #C0DF33;
+  line-height: 1.33;
+  letter-spacing: -0.19px;
+  margin: 24px 0 16px;
+  font-weight: 700;
+  font-size: max(15px, min(18px, calc(18px + -3 * ((1440px - 100vw) / 1065))));
+}
+@media (min-width: 700px) {
+  .join__subtitle {
+    height: 216px;
+    margin: 20px 0 9px;
+  }
+}
+.join__paragraph {
+  line-height: 26px;
+  letter-spacing: -0.18px;
+  color: #9AA7BE;
+  font-size: max(14px, min(16px, calc(16px + -2 * ((1440px - 100vw) / 1065))));
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.plan {
+  grid-area: plan;
+  background-color: #2AB3B1;
+  padding: max(24px, min(40px, calc(40px + -16 * ((1440px - 100vw) / 1065))));
+  display: flex;
+  flex-direction: column;
+}
+.plan__title {
+  letter-spacing: -0.23px;
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  margin: -7px 0 18px;
+}
+.plan__cost {
+  line-height: 1.63;
+  letter-spacing: -0.2px;
+  color: #ffffff50;
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+.plan__cost--value {
+  letter-spacing: -0.4px;
+  line-height: normal;
+  font-size: 2rem;
+  margin: 0 11px 0 0;
+  opacity: 1;
+  display: inline-flex;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.plan__paragraph {
+  line-height: 1.63;
+  letter-spacing: -0.2px;
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin: 4px 0 26px;
+}
+.plan__button {
+  height: 3rem;
+  width: 100%;
+  background-color: #C0DF33;
+  display: grid;
+  place-items: center;
+  color: #FFFFFF;
+  letter-spacing: -0.2px;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.why {
+  grid-area: why;
+  background-color: #4BBFBC;
+  padding: max(24px, min(40px, calc(40px + -16 * ((1440px - 100vw) / 1065))));
+  color: #FFFFFF;
+}
+.why__title {
+  letter-spacing: -0.23px;
+  font-size: 1.125rem;
+  margin: -7px 0 18px;
+}
+.why__element {
+  line-height: 1.43;
+  letter-spacing: -0.18px;
+  opacity: 0.75;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: #E6EFF5;
+  font-family: "Karla", sans-serif;
+}
+
+.hvr-shrink {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,55 @@
+// Functions 
+
+@function rem($pixels, $contexto: 16) {
+    @return ($pixels / $contexto) * 1rem;
+}
+
+
+@function flex( $minSize,  $maxSize, $mobileWidth: 375, $decktopWidth: 1440) {
+
+
+    $a: $maxSize * 1px;
+    $b: $minSize - $maxSize;
+    $c: $decktopWidth - $mobileWidth;
+    $d: $minSize * 1px;
+    $e: $decktopWidth * 1px;
+
+
+    @return max(#{$d} , min(#{$a} , calc(#{$a} + #{$b} * ((#{$e} - 100vw) / #{$c}))))
+}
+
+// calc(40px + (24 - 40) * ((1440px - 100vw) / (1440 - 375)))
+
+
+h1 {
+    font-size: flex(24, 40)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Colors 
+
+$c__black-squeeze: #E6EFF5;
+$c__white: #FFFFFF;
+$c__eastern-blue: #2AB3B1;
+$c__pear: #C0DF33;
+$c__cadet-blue: #9AA7BE;
+$c__black-squeeze: #E6EFF5;
+
+// Spacing
+
+$s__padding-card-mobile: flex(24, 40)
+
